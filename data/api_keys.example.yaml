@@ -85,6 +85,7 @@ apikeys:
 
   fofa:
     username:
+    email:
     key:
 
   fullhunt:
