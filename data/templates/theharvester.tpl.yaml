@@ -1,106 +1,107 @@
 apikeys:
 
   bevigil:
-    key:
+    key: "{{ bevigil.key }}"
 
   bitbucket:
-    key:
+    key: "{{ bitbucket.key }}"
 
   brave:
-    key:
+    key: "{{ brave.key }}"
 
+  # Beware of the typo here, I consider theHarvester made a typo and I prefer bufferoverrun in input file
   bufferoverun:
-    key:
+    key: "{{ bufferoverrun.key }}"
 
   builtwith:
-    key:
+    key: "{{ builtwith.key }}"
 
   censys:
-    id:
-    secret:
+    id: "{{ censys.id }}"
+    secret: "{{ censys.secret }}"
 
   criminalip:
-    key:
+    key: "{{ criminalip.key }}"
 
   dehashed:
-    key:
+    key: "{{ dehashed.key }}"
 
   dnsdumpster:
-    key:
+    key: "{{ dnsdumpster.key }}"
 
   fofa:
-    key:
-    email:
+    key: "{{ fofa.key }}"
+    email: "{{ fofa.email }}"
 
   fullhunt:
-    key:
+    key: "{{ fullhunt.key }}"
 
   github:
-    key:
+    key: "{{ github.key }}"
 
   hackertarget:
-    key:
+    key: "{{ hackertarget.key }}"
 
   haveibeenpwned:
-    key:
+    key: "{{ haveibeenpwned.key }}"
 
   hunter:
-    key:
+    key: "{{ hunter.key }}"
 
   hunterhow:
-    key:
+    key: "{{ hunterhow.key }}"
 
   intelx:
-    key:
+    key: "{{ intelx.key }}"
 
   leakix:
-    key:
+    key: "{{ leakix.key }}"
 
   leaklookup:
-    key:
+    key: "{{ leaklookup.key }}"
 
   mojeek:
-    key:
+    key: "{{ mojeek.key }}"
   
   netlas:
-    key:
+    key: "{{ netlas.key }}"
 
   onyphe:
-    key:
+    key: "{{ onyphe.key }}"
 
   pentestTools:
-    key:
+    key: "{{ pentestTools.key }}"
 
   projectDiscovery:
-    key:
+    key: "{{ projectDiscovery.key }}"
 
   rocketreach:
-    key:
+    key: "{{ rocketreach.key }}"
 
   securityscorecard:
-    key:
+    key: "{{ securityscorecard.key }}"
 
   securityTrails:
-    key:
+    key: "{{ securityTrails.key }}"
 
   shodan:
-    key:
+    key: "{{ shodan.key }}"
 
   tomba:
-    key:
-    secret:
+    key: "{{ tomba.key }}"
+    secret: "{{ tomba.secret }}"
 
   venacus:
-    key:
+    key: "{{ venacus.key }}"
 
   virustotal:
-    key:
+    key: "{{ virustotal.key }}"
 
   whoisxml:
-    key:
+    key: "{{ whoisxml.key }}"
 
   windvane:
-    key:
+    key: "{{ windvane.key }}"
 
   zoomeye:
-    key:
+    key: "{{ zoomeye.key }}"
