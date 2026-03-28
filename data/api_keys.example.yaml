@@ -1,0 +1,205 @@
+apikeys:
+
+  360passivedns:
+    key:
+
+  asnlookup:
+    key:
+
+  ahrefs:
+    key:
+
+  alienvault:
+    key: 
+
+  bevigil:
+    key:
+
+  bigdatacloud:
+    key:
+
+  binaryedge:
+    key: 
+
+  bitbucket:
+    key:
+
+  brave:
+    key:
+  
+  bufferoverrun:
+    key: 
+
+  builtwith:
+    key: 
+
+  c99:
+    key: 
+
+  censys:
+    id: 
+    secret: 
+
+  chaos:
+    key: 
+
+  circl:
+    username:
+    password:
+
+  certcentral:
+    username:
+    password:
+
+  criminalip:
+    key:
+
+  deepinfo:
+    key:
+
+  dehashed:
+    key:
+
+  detectify:
+    key:
+
+  dnsdb:
+    key:
+
+  dnsdumpster:
+    key:
+
+  dnslytics:
+    key:
+
+  dnsrepo:
+    key:
+
+  facebookct:
+    app1:
+      id:
+      secret:
+    app2:
+      id:
+      secret:
+
+  fofa:
+    username:
+    key:
+
+  fullhunt:
+    key:
+
+  github:
+    key: 
+
+  gitlab:
+    key:
+
+  hackertarget:
+    key:
+
+  haveibeenpwned:
+    key:
+
+  hunter:
+    key:
+
+  hunterhow:
+    key:
+
+  intelx:
+    key:
+
+  ipdata:
+    key:
+
+  ipinfo:
+    key:
+
+  leakix:
+    key:
+
+  leaklookup:
+    key:
+
+  mojeek:
+    key:
+  
+  netlas:
+    key:
+
+  onyphe:
+    key:
+
+  passivetotal:
+    username:
+    key:
+  
+  pastebin:
+    key:
+
+  pentestTools:
+    key:
+
+  projectDiscovery:
+    key:
+
+  publicwww:
+    key:
+
+  quake:
+    key:
+
+  rocketreach:
+    key:
+
+  securityscorecard:
+    key:
+
+  securityTrails:
+    key:
+
+  shodan:
+    key:
+
+  socradar:
+    key:
+
+  spamhaus:
+    username:
+    password:
+
+  threatbook:
+    key:
+
+  tomba:
+    key:
+    secret:
+
+  urlscan:
+    key:
+
+  venacus:
+    key:
+
+  virustotal:
+    key:
+
+  whoisxml:
+    key:
+
+  windvane:
+    key:
+
+  yandex:
+    username:
+    key:
+
+  zetalytics:
+    key:
+  
+  zoomeye:
+    username:
+    password:
+    key: 

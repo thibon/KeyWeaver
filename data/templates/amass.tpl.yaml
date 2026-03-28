@@ -1,0 +1,238 @@
+datasources:
+  - name: 360PassiveDNS
+    ttl: 3600
+    creds:
+      account: 
+        apikey: {{ 360passivedns.key  | default("null") }}
+  - name: ASNLookup
+    creds:
+      account: 
+        apikey: {{ asnlookup.key  | default("null") }}
+  - name: Ahrefs
+    ttl: 4320
+    creds:
+      account: 
+        apikey: {{ ahrefs.key  | default("null") }}
+  - name: AlienVault
+    creds:
+      account: 
+        apikey: {{ alienvault.key  | default("null") }}
+  - name: BeVigil
+    creds:
+      account: 
+        apikey: {{ bevigil.key  | default("null") }}
+  - name: BigDataCloud
+    creds:
+      account: 
+        apikey: {{ bigdatacloud.key  | default("null") }}
+  - name: BinaryEdge
+    ttl: 10080
+    creds:
+      account: 
+        apikey: {{ binaryedge.key  | default("null") }}
+  - name: BufferOver
+    creds:
+      account: 
+        apikey: {{ bufferoverrun.key  | default("null") }}
+  - name: BuiltWith
+    ttl: 10080
+    creds:
+      account: 
+        apikey: {{ builtwith.key  | default("null") }}
+  - name: C99
+    ttl: 4320
+    creds:
+      account1: 
+        apikey: {{ c99.key  | default("null") }}
+      account2: 
+        apikey: {{ c99.key2  | default("null") }}
+  - name: Censys
+    ttl: 10080
+    creds:
+      account: 
+        apikey: {{ censys.id  | default("null") }}
+        secret: {{ censys.secret  | default("null") }}
+  - name: Chaos
+    ttl: 4320
+    creds:
+      account: 
+        apikey: {{ chaos.key  | default("null") }}
+  - name: CIRCL
+    creds:
+      account: 
+        username: {{ circl.username  | default("null") }}
+        password: {{ circl.password  | default("null") }}
+  - name: CertCentral
+    creds:
+      account: 
+        username: {{ certcentral.username  | default("null") }}
+        apikey: {{ certcentral.password  | default("null") }}
+  - name: DNSDB
+    ttl: 4320
+    creds:
+      account: 
+        apikey: {{ dnsdb.key  | default("null") }}
+  - name: DNSlytics
+    creds:
+      account: 
+        apikey: {{ dnslytics.key  | default("null") }}
+  - name: DNSRepo
+    creds:
+      account: 
+        apikey: {{ dnsrepo.key  | default("null") }}
+  - name: Deepinfo
+    creds:
+      account: 
+        apikey: {{ deepinfo.key  | default("null") }}
+  - name: Detectify
+    creds:
+      account: 
+        apikey: {{ detectify.key  | default("null") }}
+  - name: FacebookCT
+    ttl: 4320
+    creds:
+      app1: 
+        apikey: {{ facebookct.app1.id  | default("null") }}
+        secret: {{ facebookct.app1.secret  | default("null") }}
+      app2: 
+        apikey: {{ facebookct.app2.id  | default("null") }}
+        secret: {{ facebookct.app2.secret  | default("null") }}
+  - name: FOFA
+    ttl: 10080
+    creds:
+      account: 
+        username: {{ fofa.username  | default("null") }}
+        apikey: {{ fofa.key  | default("null") }}
+  - name: FullHunt
+    creds:
+      account: 
+        apikey: {{ fullhunt.key  | default("null") }}
+  - name: GitHub
+    ttl: 4320
+    creds:
+      accountname: 
+        apikey: {{ github.key  | default("null") }}
+  - name: GitLab
+    ttl: 4320
+    creds:
+      accountname: 
+        apikey: {{ gitlab.key  | default("null") }}
+  - name: HackerTarget
+    ttl: 1440
+    creds:
+      account: 
+        apikey: {{ hackertarget.key  | default("null") }}
+  - name: Hunter
+    creds:
+      account: 
+        apikey: {{ hunter.key  | default("null") }}
+  - name: IntelX
+    creds:
+      account: 
+        apikey: {{ intelx.key  | default("null") }}
+  - name: IPdata
+    creds:
+      account: 
+        apikey: {{ ipdata.key  | default("null") }}
+  - name: IPinfo
+    creds:
+      account: 
+        apikey: {{ ipinfo.key  | default("null") }}
+  - name: LeakIX
+    creds:
+      account: 
+        apikey: {{ leakix.key  | default("null") }}
+  - name: Netlas
+    creds:
+      account: 
+        apikey: {{ netlas.key  | default("null") }}
+  - name: ONYPHE
+    ttl: 4320
+    creds:
+      account: 
+        apikey: {{ onyphe.key  | default("null") }}
+  - name: Pastebin
+    ttl: 10080
+    creds:
+      account: 
+        apikey: {{ pastebin.key  | default("null") }}
+  - name: PassiveTotal
+    ttl: 10080
+    creds:
+      account: 
+        username: {{ passivetotal.username  | default("null") }}
+        apikey: {{ passivetotal.key  | default("null") }}
+  - name: PentestTools
+    ttl: 10080
+    creds:
+      account: 
+        apikey: {{ pentestTools.key  | default("null") }}
+  - name: PublicWWW
+    ttl: 10080
+    creds:
+      account: 
+        apikey: {{ publicwww.key  | default("null") }}
+  - name: Quake
+    ttl: 4320
+    creds:
+      account: 
+        apikey: {{ quake.key  | default("null") }}
+  - name: SOCRadar
+    creds:
+      account: 
+        apikey: {{ socradar.key  | default("null") }}
+  - name: SecurityTrails
+    ttl: 1440
+    creds:
+      account: 
+        apikey: {{ securityTrails.key  | default("null") }}
+  - name: Shodan
+    ttl: 10080
+    creds:
+      account: 
+        apikey: {{ shodan.key  | default("null") }}
+  - name: Spamhaus
+    ttl: 1440
+    creds:
+      account: 
+        username: {{ spamhaus.username  | default("null") }}
+        password: {{ spamhaus.password  | default("null") }}
+  - name: ThreatBook
+    creds:
+      account1: 
+        apikey: {{ threatbook.key  | default("null") }}
+  - name: URLScan
+    creds:
+      account: 
+        apikey: {{ urlscan.key  | default("null") }}
+  - name: VirusTotal
+    ttl: 10080
+    creds:
+      account: 
+        apikey: {{ virustotal.key  | default("null") }}
+  - name: WhoisXMLAPI
+    creds:
+      account: 
+        apikey: {{ whoisxml.key  | default("null") }}
+  - name: Yandex
+    ttl: 1440
+    creds:
+      account: 
+        username: {{ username.key  | default("null") }}
+        apikey: {{ yandex.key  | default("null") }}
+  - name: ZETAlytics
+    ttl: 1440
+    creds:
+      account: 
+        apikey: {{ zetalytics.key  | default("null") }}
+  - name: ZoomEye
+    ttl: 1440
+    creds:
+      account: 
+        username: {{ zoomeye.username  | default("null") }}
+        password: {{ zoomeye.password  | default("null") }}                     
+
+# this is the global options that will be considered. For example, minimum_ttl would be a global option used to compare
+# the minimum_ttl to the other datasources ttl.
+global_options: 
+  minimum_ttl: 1440
