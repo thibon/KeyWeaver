@@ -3,27 +3,31 @@ import argparse
 import os
 from jinja2 import Environment, FileSystemLoader
 
-# mapping tool -> template / output
-TEMPLATES = {
-    "theharvester": ("theharvester.tpl.yaml", "theharvester_config.yaml"),
-    "bbot": ("bbot_secrets.tpl.yaml", "secrets.yml"),
-}
+def expand(path):
+    return os.path.expanduser(path)
+
+def load_yaml(path):
+    with open(path) as f:
+        return yaml.safe_load(f)
 
 def main():
     parser = argparse.ArgumentParser(description="Generate configs from central API keys")
+    
     parser.add_argument("--input", default="api_keys.yaml", help="Path to api_keys.yaml")
-    parser.add_argument("--output-dir", default=".", help="Output directory")
-    parser.add_argument("--tools", default="all", help="Comma-separated list of tools (bbot,theharvester)")
+    parser.add_argument("--targets", default="targets.yaml", help="Targets config file")
+    parser.add_argument("--output-dir", default="./generated", help="Local output directory")
+    parser.add_argument("--tools", default="all", help="Comma-separated tools")
+    parser.add_argument("--deploy", action="store_true", help="Write directly to tool destinations")
 
     args = parser.parse_args()
 
-    # load keys
-    with open(args.input) as f:
-        data = yaml.safe_load(f)["api_keys"]
+    # load data
+    apikeys = load_yaml(args.input)["apikeys"]
+    targets = load_yaml(args.targets)["tools"]
 
     # select tools
     if args.tools == "all":
-        selected_tools = TEMPLATES.keys()
+        selected_tools = targets.keys()
     else:
         selected_tools = [t.strip() for t in args.tools.split(",")]
 
@@ -32,20 +36,39 @@ def main():
     os.makedirs(args.output_dir, exist_ok=True)
 
     for tool in selected_tools:
-        if tool not in TEMPLATES:
+        if tool not in targets:
             print(f"[!] Unknown tool: {tool}")
             continue
 
-        template_file, output_file = TEMPLATES[tool]
+        config = targets[tool]
+
+        template_file = config["template"]
+        output_name = config["output"]
+        destination = expand(config.get("destination", ""))
+
         template = env.get_template(template_file)
-        rendered = template.render(**data)
+        template.render(**apikeys)
 
-        output_path = os.path.join(args.output_dir, output_file)
-
-        with open(output_path, "w") as f:
+        # 1. toujours générer en local
+        local_path = os.path.join(args.output_dir, output_name)
+        with open(local_path, "w") as f:
             f.write(rendered)
 
-        print(f"[+] Generated {output_path}")
+        print(f"[+] Generated {local_path}")
+
+        # 2. deploy option
+        if args.deploy:
+            if not destination:
+                print(f"[!] No destination defined for {tool}")
+                continue
+
+            dest_dir = os.path.dirname(destination)
+            os.makedirs(dest_dir, exist_ok=True)
+
+            with open(destination, "w") as f:
+                f.write(rendered)
+
+            print(f"[+] Deployed to {destination}")
 
 if __name__ == "__main__":
     main()
